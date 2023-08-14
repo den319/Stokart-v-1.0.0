@@ -1,0 +1,847 @@
+
+:root {
+    --green: #00c695;
+    --light-green:#b6ffed;
+    --red: #ed0101;
+    --shadow: rgba(0, 0, 0, 0.7);
+    --boder-line: #00000066;
+}
+
+* {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* body {
+    background-color: #f4ff001a;
+} */
+
+#header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--boder-line);
+}
+
+    #nav-bar {
+        display: flex;
+        width: 95%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        #logo-container {
+            margin: 0px 0px 1px 5px;
+        }
+
+            #logo-1 {
+                font-size: 27px;
+                color: var(--green);
+                font-family: 'play', sans-serif;
+            }
+
+        .item-list {
+                display: flex;
+                width: 12rem;
+                padding: 0;
+                justify-content: space-evenly;
+                align-items: center;
+        }
+
+            .item-list > button {
+                text-decoration: none;
+                list-style: none;
+                width: 75px;
+                height: 30px;
+                font-size: 15px;
+                background-color: var(--light-green);
+                color: var(--green);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            #watchlist:hover {
+                background-color: var(--green);
+                color: var(--light-green);
+            }
+
+            #sign-in:hover {
+                background-color: var(--green);
+                color: var(--light-green);
+            }
+
+
+    .search-bar-container {
+        position: relative;
+        width: 50%;
+        height: 180px;
+        margin: 20px;
+    }
+        .search-bar-sub-container {
+            display: flex;
+            width: 100%;
+            height: 25%;
+            /* margin: 5px; */
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+            .search-bar {
+                position: relative;
+                height: 85%;
+                width: 85%;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 5px;
+                border: none;
+                box-shadow: 0 0px 5px 0 var(--shadow);
+            }
+
+            /* .search-bar[type= text] {
+                
+            } */
+
+            #suggestion-container {
+                display: none;
+                position: absolute;
+                width: 100%;
+                top: 25%;
+                height: 31vh;
+                padding: 5px;
+                background-color: white;
+                border: 1px solid var(--shadow);
+                overflow: hidden;
+                overflow-y: scroll;
+                border-radius: 10px;
+            }
+
+                .suggestions-div {
+                    width: 100%;
+                    display: flex;
+                    height: 15%;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                    .suggestion {
+                        width: 100%;
+                        height: 100%;
+                        border-bottom: 1px solid;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        background-color: transparent;
+                        font-size: 15px;
+                    }
+
+                        .suggestions-div:hover .suggestion{
+                            background-color: var(--light-green);
+                            color: var(--green);
+                        }
+
+            
+
+
+
+        .trading-ways {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 60%;
+            margin-top: 15px;
+            justify-content: space-around;
+        }
+
+            .trading-way-section {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+                .trading-way {
+                    width: 8rem;
+                    height: 2.5rem; 
+                    /* margin: 0px 0px 0px 0px; */
+                    background-color: var(--light-green);
+                    border-radius: 5px;
+                    font-size: 16px;
+                    border: none;
+                    color: var(--green);
+                    transition: 0.5s ease;
+                    cursor: pointer;
+                }
+                    .trading-way:hover {
+                        cursor: pointer;
+                        background-color: var(--green);
+                        color: var(--light-green);
+                    }
+
+
+.main-container {
+    /* width: 90%; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px 2px 0px 35px;
+}
+    /* top gainers section */
+
+    .top-gainers-container {
+        display: flex;
+        margin: 15px;
+        height: 300px;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+        .top-gainers-title {
+            font-size: 20px;
+            font-weight: 700;
+            /* font-family: sans-serif; */
+            color: var(--green);
+        }
+
+        .top-gainers-section {
+            display: flex;
+            width: 100%;
+            height: 300px;
+            margin: 20px;
+            overflow: hidden;
+            overflow-y: scroll;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+            .topper-div {
+                width: 100%;
+                margin: 3px;
+                padding: 2px;
+            }
+
+                .topper {
+                    display: flex;
+                    height: 115px;
+                    width: 95%;
+                    border: 1px solid;
+                    border-radius: 10px;
+                    /* margin: 3px; */
+                    padding: 5px;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                    .topper:hover {
+                        background-color:#e6ffcc;
+                    }
+
+                    .company-name {
+                        font-size: 25px;
+                    }
+
+                    .toppers-meta-container {
+                        width: 65%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+
+                        .price-vol-container {
+
+                        }
+
+                            .company-price {
+                                margin: 0;
+                                font-size: 15px;
+                                margin-bottom: 10px;
+                            }
+
+                            .company-volume {
+                                margin: 0;
+                                font-size: 15px;
+                                /* margin-bottom: 10px; */
+                            }
+
+                        .diff-container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+
+                            .numeric-diff {
+                                margin: 0;
+                                font-size: 15px;
+                                margin-bottom: 9px;
+                            } 
+
+                            .percentage-diff {
+                                margin: 0;
+                                font-size: 15px;
+                                /* margin-bottom: 10px; */
+                            }
+
+                        .remove-btn {
+                            width: 40px;
+                            height: 40px;
+                            background-color: rgb(243, 212, 212);
+                            color: var(--red);
+                            border: none;
+                            border-radius: 10px;
+                            transition: 0.5s ease;
+                        }
+
+                            .remove-btn:hover {
+                                background-color: var(--red);
+                                color: rgb(243, 212, 212);
+                            }
+
+                            .fa-trash {
+                                font-size: 20px;
+                            }
+
+                        .add-btn {
+                            width: 40px;
+                            height: 40px;
+                            background-color: var(--light-green);
+                            color: var(--green);
+                            border: none;
+                            border-radius: 10px;
+                            transition: 0.5s ease;
+                        }
+                            .add-btn:hover {
+                                background-color: var(--green);
+                                color: var(--light-green);
+                            }
+
+                            .fa-plus {
+                                font-size: 20px;  
+                            }
+                
+                .details-container {
+                    width: 95%;
+                    height: 30vh;
+                    position: relative;
+                    top: 0%;
+                    margin: 10px 0px 0px 0px;
+                    background-color: white;
+                    border: 1px solid;
+                    border-radius: 10px;
+                }
+
+                    .details-sub-container {
+                        position: absolute;
+                        display: flex;
+                        width: 95%;
+                        height: 100%;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: space-evenly;
+                        align-items: center;
+                    }
+
+                        .meta-title-heading {
+                            margin: 11px 0px;
+                            text-align: center;
+                        }
+
+                        .perticular-data {
+                            text-align: center;
+                            list-style: none;
+                        }
+
+
+
+    /* top loser section */
+
+    .top-losers-container {
+        display: flex;
+        margin: 15px;
+        height: 45vh;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+        .top-losers-title {
+            font-size: 20px;
+            font-weight: 700;
+            /* font-family: sans-serif; */
+            color: var(--green);
+        }
+
+        .top-losers-section {
+            display: flex;
+            width: 100%;
+            height: 35vh;
+            margin: 20px;
+            overflow: hidden;
+            overflow-y: scroll;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+
+
+    /* searched-stock */
+
+    .back-btn-for-search {
+        width: 10%;
+        margin: 15px;
+        height: 35px;
+        font-size: 15px;
+        color: var(--green);
+        background-color: var(--light-green);
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+     
+        .back-btn-for-search:hover {
+            background-color: var(--green);
+            color: var(--light-green);
+        }
+
+
+    .searched-stock-section {
+        width: 95%;
+        
+    }
+
+        .searched-stock {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+        }
+
+
+
+/* watchlist-section */
+
+    .watchlist-section {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+
+
+
+/* footer section */
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #008f6b;
+    color: var(--light-green);
+    margin-top: 60px;
+}
+
+    .footer-header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }   
+        .footer-header > h1 {
+            margin-bottom: 15px;
+            font-size: 50px;
+            font-family: 'play', sans-serif;
+        }
+
+        .footer-header h3 {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+        }
+
+        .contact {
+            margin-top: -1rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+        }
+
+            .footer-icon {
+                margin: 10px;
+                padding: 7px 10px 6px 10px;
+                font-size: 35px;
+                border-radius: 25px;
+                color: var(--light-green);
+                border: none;  
+                transition: 0.1s ease; 
+            }
+
+                .footer-icon > i {
+                    line-height: 0;
+                    
+                }
+
+                #instagram {
+                    line-height: 1;
+                }
+
+                #twitter:hover {
+                    color: #00d7ff;
+                }
+
+                #instagram:hover {
+                    background: -webkit-linear-gradient(90deg, rgba(107,48,195,1) 0%, rgba(249,46,46,1) 51%, rgba(255,143,57,0.9332983193277311) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    /* background-color: var(--light-green); */
+                }
+                #telegram:hover {
+                    background-color: #ffffff;
+                    color: #00d7ff;
+                }
+                #facebook:hover {
+                    background-color: #ffffff;
+                    color: #0061d0;
+                }
+                #gmail:hover {
+                    color: #d62424;
+                }
+
+                .footer-icon:active {
+                    transform: scale(1.3);
+                }
+
+        .trademark {
+            font-size: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+/* media query section */
+
+
+@media only screen and (width <= 600px) {
+
+    /* nav bar */
+
+    #nav-bar {
+        width: 95%;
+    }
+        #logo-container{
+            margin: 0;
+        }
+            #logo-1 {
+                font-size: 25px;
+            }
+
+        .item-list > button {
+            width: 70px;
+            height: 25px;
+            font-size: 13px;
+        }
+        
+
+    /* search-bar section */
+
+    .search-bar-container {
+        width: 75%;
+        margin: 20px 20px 10px 20px;
+    }
+
+        .search-bar {
+            width: 100%;
+        }
+
+    .trading-way-section {
+        justify-content: space-evenly;
+    }
+
+        .trading-way {
+            width: 9rem;
+            /* margin-left: 3rem; */
+            height: 2.5rem;
+            font-size: 13px;
+        }
+
+
+    /* top gainer and loser section */
+
+    .main-container {
+        margin: 5px 20px 20px 10px
+    }
+        .top-gainers-title {
+            font-size: 18px;
+        }
+        .top-losers-title {
+            font-size: 18px;
+        }
+
+        .top-gainers-section {
+            margin: 20px 10px 20px 10px;
+        }
+        .top-losers-section {
+            margin: 20px 10px 20px 10px;
+        }
+
+            .topper {
+                height: 5.5rem;
+            }
+                .company-name {
+                    font-size: 20px;
+                }
+                .company-price, .company-volume, .numeric-diff, .percentage-diff {
+                    font-size: 13px;
+                }
+                .add-btn {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 7px;
+                }
+
+    /* meta- details of stocks */
+
+            .details-container {
+                height: 11rem;
+            }
+
+
+                .meta-title-heading {
+                    margin: 11px 0px;
+                    text-align: center;
+                }
+                
+                .perticular-data {
+                    font-size: 13px;
+                    text-align: center;
+                }
+
+
+    /* watchlist section and back button */
+
+        .back-btn-for-search {
+            width: 6rem;
+        }
+
+        .watchlist-section {
+            width: 100%;
+            margin-left: 1rem;
+        }
+
+
+
+
+    /* footer section */
+    .footer {
+        height: 340px;
+        margin-top: 50px;
+    }
+  
+            .footer-header > h1 {
+                margin-bottom: 10px;
+                font-size: 40px;
+            }
+
+            .footer-header h3 {
+                font-size: 17px;
+            }
+
+                .footer-icon {
+                    margin: 10px;
+                    padding: 7px 10px 6px 10px;
+                    font-size: 30px;
+                    border-radius: 25px;
+                }
+
+                    .footer-icon:active {
+                        transform: scale(1.2);
+                    }
+
+            .trademark {
+                font-size: 13px;
+            }
+}
+
+@media only screen and (width < 425px) {
+
+    #nav-bar {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+        #logo-container{
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            border-bottom: 2px solid var(--boder-line);
+        }
+
+        .item-list {
+            width: 13rem;
+            padding: 0;
+            margin: 12px 0px;
+            margin-bottom: 0px;
+            margin-top: 1.5rem;
+        
+        }
+
+            .item-list > button {
+                width: 75px;
+                height: 30px;
+                font-size: 13px;
+            }
+        
+
+    /* search-bar section */
+
+    .search-bar-container {
+        width: 90%;
+        margin: 20px 20px 0px 20px;
+    }
+
+        .search-bar-sub-container {
+            height: 22%;
+        }
+
+            #suggestion-container {
+                width: 95%;
+            }
+
+    .trading-way-section {
+        justify-content: space-evenly;
+    }
+
+        .trading-way {
+            width: 5rem;
+            height: 2rem;
+        }
+
+
+    /* top gainer and loser section */
+
+    .main-container {
+        margin: 5px 20px 20px 0px
+    }
+        .top-gainers-title {
+            font-size: 15px;
+        }
+        .top-losers-title {
+            font-size: 15px;
+        }
+
+        .top-gainers-section {
+            margin: 20px 0px 20px 10px;
+        }
+        .top-losers-section {
+            margin: 20px 0px 20px 10px;
+        }
+
+            .topper {
+                height: 4rem;
+            }
+                .company-name {
+                    font-size: 14px;
+                }
+                .company-price, .company-volume, .numeric-diff, .percentage-diff {
+                    font-size: 10px;
+                    margin-bottom: 0;
+                }
+                .add-btn {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                }
+
+    /* meta- details of stocks */
+
+            .details-container {
+                height: 6rem;
+            }
+
+                .details-sub-container {
+                    width: 100%;
+                }
+
+                    .meta-title-heading {
+                        margin: 5px 0px;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                    
+                    .perticular-data {
+                        font-size: 10px;
+                        text-align: center;
+                    }
+
+
+    /* watchlist section and back button */
+
+        .back-btn-for-search {
+            height: 2rem;
+            width: 4rem;
+        }
+
+        .watchlist-section {
+            width: 100%;
+            margin-left: 1.5rem;
+        }
+
+
+
+    /* footer section */
+    .footer {
+        height: 290px;
+        margin-top: 40px;
+    }
+  
+            .footer-header > h1 {
+                margin-bottom: 5px;
+                font-size: 30px;
+            }
+
+            .footer-header h3 {
+                font-size: 13px;
+            }
+
+                .footer-icon {
+                    margin: 2px;
+                    padding: 7px 10px 6px 10px;
+                    font-size: 20px;
+                    border-radius: 25px;
+                }
+
+                    .footer-icon:active {
+                        transform: scale(1.2);
+                    }
+
+            .trademark {
+                font-size: 9px;
+            }
+}
+
